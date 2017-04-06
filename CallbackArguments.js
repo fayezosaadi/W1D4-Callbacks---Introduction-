@@ -3,15 +3,15 @@
   function findWaldo(arr, found) {
     arr.forEach(function(e,i){
       if (e === "Waldo") {
-        found(i);
+        found(i); // execute callback: I just passed the index into our call back function
       }
     });
   }
 
 
-  function actionWhenFound(ind) {
+  function actionWhenFound(indx) {
 
-    console.log("found Waldo at index " + ind + '!');
+    console.log("found Waldo at index " + indx + '!');
   }
 
   findWaldo(["Alice", "Bob", "Waldo", "Winston"], actionWhenFound);
